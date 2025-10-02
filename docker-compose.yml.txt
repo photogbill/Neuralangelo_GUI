@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  neuralangelo-gui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: neuralangelo-gui
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - NEURALANGELO_PATH=/app/neuralangelo
+      - COLMAP_PATH=/usr/bin/colmap
+      - BACKEND_PORT=8000
+      - GPU_DEVICES=0
+    ports:
+      - "8000:8000"
+      - "3000:3000"
+    volumes:
+      - ./projects:/app/projects
+      - ./logs:/app/logs
+      - neuralangelo-cache:/root/.cache
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+    command: ["uvicorn", "backend.server:app", "--host", "0.0.0.0", "--port", "8000"]
+
+volumes:
+  neuralangelo-cache:
+    driver: local

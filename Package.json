@@ -1,0 +1,43 @@
+{
+  "name": "neuralangelo-gui",
+  "version": "1.0.0",
+  "description": "A comprehensive graphical interface for Neuralangelo 3D reconstruction",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext js,jsx",
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.263.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "tailwindcss": "^3.4.0",
+    "vite": "^5.0.8"
+  },
+  "keywords": [
+    "neuralangelo",
+    "3d-reconstruction",
+    "neural-rendering",
+    "computer-vision"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/neuralangelo-gui.git"
+  }
+}
