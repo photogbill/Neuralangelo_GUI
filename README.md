@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Neuralangelo GUI](https://via.placeholder.com/800x200/1e293b/60a5fa?text=Neuralangelo+GUI)
+![Neuralangelo GUI - Project Setup](./1.png)
 
 **A comprehensive, user-friendly graphical interface for NVIDIA's Neuralangelo 3D reconstruction**
 
@@ -90,6 +90,32 @@ This application provides an end-to-end workflow from image capture to 3D mesh e
 - **CI/CD:** GitHub Actions pipeline
 - **Testing:** Comprehensive test suite
 - **Documentation:** Full guides and API docs
+
+## 📸 Screenshots
+
+### Project Setup
+![Project Setup](./1.png)
+*Create projects and upload images with an intuitive interface*
+
+### Data Processing (COLMAP)
+![Data Processing](./2.png)
+*Automated camera pose estimation with real-time status*
+
+### Configuration
+![Configuration](./3.png)
+*Visual controls for all training parameters and advanced settings*
+
+### Training Monitor
+![Training](./4.png)
+*Real-time training progress with live metrics and logs*
+
+### Mesh Extraction
+![Mesh Extraction](./5.png)
+*Extract high-quality 3D meshes with post-processing options*
+
+### Results Visualization
+![Results](./6.png)
+*View statistics and download your 3D reconstructions*
 
 ## 📋 Prerequisites
 
@@ -238,6 +264,8 @@ npm run dev
 Navigate to `http://localhost:3000`
 
 ### 2. Create Your First Project
+
+> 💡 **Tip:** See the [Screenshots](#screenshots) section above for visual guidance through each step.
 
 1. **Project Setup Tab**
    - Enter project name: `my_first_scan`
